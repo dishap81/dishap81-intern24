@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+
+  <style>
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main layout (2 columns on desktop) */
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 15px;
+    }
+
+    .left img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* ----- Responsive Design ----- */
+    @media (max-width: 768px) {
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+
+      /* Stack columns vertically */
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        padding: 10px;
+      }
+
+      header {
+        font-size: 22px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>My Responsive Webpage</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="left">
+      <img src="https://via.placeholder.com/600x400" alt="demo image">
+    </div>
+
+    <div class="right">
+      <h2>Welcome!</h2>
+      <p>
+        This is a simple responsive webpage example.  
+        Resize the browser or open in mobile view to see how the layout adjusts using CSS media queries.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
